@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>timerDemo</title>
+    <title>计时器</title>
 
     <script>
         var second;//时 分 秒
@@ -37,14 +37,14 @@
 
     </script>
 </head>
-<body>
+<body style="background-color: #000000">
 
 <marquee>点击多次开始有惊喜！</marquee>
 <div style="text-align: center">
     <input type="text" id="timeValue" value="0s" 
-           style="height: 50px; width: 200px; font-size:45px">
+           style="height: 50px; width: 200px; font-size:45px; color: #ffffff; background-color: #333333">
            <br>
-    <button type="button" onclick="startTimer()">开始</button> <button type="button" onclick="stopTimer()">暂停</button> <button type="button" onclick="resetTimer()">重置</button>
+    <button type="button" onclick="startTimer()" style="color: #ffffff; background-color: #333333">开始</button> <button type="button" onclick="stopTimer()" style="color: #ffffff; background-color: #333333">暂停</button> <button type="button" onclick="resetTimer()" style="color: #ffffff; background-color: #333333">重置</button>
 </div>
 </body>
 </html>
