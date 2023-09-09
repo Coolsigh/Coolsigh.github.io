@@ -7,6 +7,16 @@
     <meta charset="UTF-8">
     <title>计时器</title>
 
+    <style>
+        button.btns
+            {
+                height: 100px;
+                width: 200px;
+                font-size: 70px;
+                color: #ffffff;
+                background: #333333;
+            }
+    </style>
     <script>
         var second;//时 分 秒
         second=0;//初始化
@@ -37,14 +47,14 @@
 
     </script>
 </head>
-<body style="background-color: #000000">
+<body>
 
 <marquee>点击多次开始有惊喜！</marquee>
 <div style="text-align: center">
     <input type="text" id="timeValue" value="0s" 
-           style="height: 50px; width: 200px; font-size:45px; color: #ffffff; background-color: #333333">
+           style="height: 150px; width: 600px; font-size:135px; color: #ffffff; background-color: #333333">
            <br>
-    <button type="button" onclick="startTimer()" style="color: #ffffff; background-color: #333333">开始</button> <button type="button" onclick="stopTimer()" style="color: #ffffff; background-color: #333333">暂停</button> <button type="button" onclick="resetTimer()" style="color: #ffffff; background-color: #333333">重置</button>
+    <button type="button" onclick="startTimer()" class="btns">开始</button> <button type="button" onclick="stopTimer()" class="btns">暂停</button> <button type="button" onclick="resetTimer()" class="btns">重置</button>
 </div>
 </body>
 </html>
