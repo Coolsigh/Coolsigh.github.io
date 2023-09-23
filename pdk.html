@@ -44,7 +44,7 @@
                     alert ("还有一个彩蛋密码")
                     alert ("报应")
                     alert ("你可以试试输入你的名字的首字母")*/
-                    alert ("网站为防止个人信息泄露, 功能暂时关闭 仅在节日或者特殊日期开放特定功能")
+                    alert ("为防止个人信息泄露, 本站已关闭大部分功能. 仅在节日或特殊日期开放特定功能.");
                 }
             function onclicknum(nums)
                 {
@@ -61,16 +61,20 @@
                     var t=document.getElementById("msgbx");
                     str.value=str.value.substr(0,str.value.length-1);
                 }
-                  </script>
+            function onclickcheck()
+                {
+                    alert ("为防止个人信息泄露, 本站已关闭大部分功能. 仅在节日或特殊日期开放特定功能.");
+                }
+        </script>
     </head>
     
     <body style="background-color: #000000">
-        <p style="font-size: 3.0em; color: #ffffff" align="center">请输入口令</p>
-        <!-- <br> -->
+        <!-- <p style="font-size: 3.0em; color: #ffffff" align="center">请输入口令</p> -->
+        <br><br><br><br><br>
         <!-- <p style="font-size: 2.0em; color: #ffffff" align="center">DEATH IS WAITING FOR YOU</p><br> -->
         <!-- <p style="font-size: 0.0001em; color: red" align="center">YOU SAW IT?</p> -->
         <input type="button" id="btn" value="口令提示" class="dth" onclick="DeathBox()" /><br>
-        <input type="text" id="msgbx" class="dth" /><br>
+        <input type="text" id="msgbx" class="dth" placeholder="请输入口令"/>
         <input type="button" id="Q" value="Q" class="smbtn" onclick="onclicknum('Q')" />
         <input type="button" id="W" value="W" class="smbtn" onclick="onclicknum('W')" />
         <input type="button" id="E" value="E" class="smbtn" onclick="onclicknum('E')" />
@@ -102,10 +106,7 @@
         <input type="button" id="M" value="M" class="smbtn" onclick="onclicknum('M')" />
         <input type="button" id="clr" value="重置" style="height: 2.8em; width: 5.735em; font-size: 2.0em; background-color: #555555; color: #ffffff; border-top: #ff0000; border-left: #ff0000; border-bottom: #ff0000; border-right: #ff0000;" onclick="onclickclr()" />
         <input type="button" id="ok" value="OK" class="smbtn" onclick="onclickcheck()" />
-        <!--300行提前庆祝！-->
-        <p class="smll"></p><br>
         
+        <!--300行提前庆祝！-->
     </body>
 </html>
-                                                                                        
-                                       
