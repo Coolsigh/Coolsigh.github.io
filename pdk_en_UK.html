@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Enter password</title>
+        <style>
+            input.dth
+                {
+                    background-color: #444444;
+                    color: #ffffff;
+                    border: 2px solid #666666;
+                    height: 3.0em;
+                    width: 1000px;
+                    font-size: 2.0em;
+                }
+            input.smbtn
+                {
+                    background-color: #444444;
+                    color: #ffffff;
+                    border: 2px solid #666666;
+                    height: 2.8em;
+                    width: 2.8em;
+                    font-size: 2.0em;
+                }
+            p.smll
+                {
+                    color: #333333;
+                    text-align: center;
+                }
+            input.hhhhh
+                {
+                    height: 2.8em; 
+                    width: 5.735em; 
+                    font-size: 2.0em; 
+                    background-color: #444444; 
+                    color: #ffffff; 
+                    border: 2px solid #666666
+                }
+            input:hover
+                {
+                    background-color: #666666;
+                    transition-duration: 0.2s;
+                }
+        </style>
+        <script>
+            var str;
+            function DeathBox()
+                {
+                    alert ("To prevent personal information leakage, most functions on this website have been disabled Only open specific functions on holidays or special days.");
+                }
+            function onclicknum(nums)
+                {
+                    str = document.getElementById("msgbx");
+                    str.value = str.value + nums;
+                }
+            function onclickclr()
+                {
+                    str = document.getElementById("msgbx");
+                    str.value = null;
+                }
+            function onclickbackspace()
+                {
+                    var t=document.getElementById("msgbx");
+                    str.value=str.value.substr(0,str.value.length-1);
+                }
+            function onclickcheck()
+                {
+                    alert ("To prevent personal information leakage, most functions on this website have been disabled Only open specific functions on holidays or special days.");
+                }
+        </script>
+    </head>
+    
+    <body style="background-color: #000000">
+        <!-- <p style="font-size: 3.0em; color: #ffffff" align="center">请输入口令</p> -->
+        <br><br><br><br><br>
+        <!-- <p style="font-size: 2.0em; color: #ffffff" align="center">DEATH IS WAITING FOR YOU</p><br> -->
+        <!-- <p style="font-size: 0.0001em; color: red" align="center">YOU SAW IT?</p> -->
+        <input type="button" id="btn" value="Password prompt" class="dth" onclick="DeathBox()" /><br>
+        <input type="text" id="msgbx" class="dth" placeholder="Enter password"/>
+        <input type="button" id="Q" value="Q" class="smbtn" onclick="onclicknum('Q')" />
+        <input type="button" id="W" value="W" class="smbtn" onclick="onclicknum('W')" />
+        <input type="button" id="E" value="E" class="smbtn" onclick="onclicknum('E')" />
+        <input type="button" id="R" value="R" class="smbtn" onclick="onclicknum('R')" />
+        <input type="button" id="T" value="T" class="smbtn" onclick="onclicknum('T')" />
+        <input type="button" id="Y" value="Y" class="smbtn" onclick="onclicknum('Y')" />
+        <input type="button" id="U" value="U" class="smbtn" onclick="onclicknum('U')" />
+        <input type="button" id="I" value="I" class="smbtn" onclick="onclicknum('I')" />
+        <input type="button" id="O" value="O" class="smbtn" onclick="onclicknum('O')" />
+        <input type="button" id="P" value="P" class="smbtn" onclick="onclicknum('P')" />
+        <br>
+        <input type="button" id="A" value="A" class="smbtn" onclick="onclicknum('A')" />
+        <input type="button" id="S" value="S" class="smbtn" onclick="onclicknum('S')" />
+        <input type="button" id="D" value="D" class="smbtn" onclick="onclicknum('D')" />
+        <input type="button" id="F" value="F" class="smbtn" onclick="onclicknum('F')" />
+        <input type="button" id="G" value="G" class="smbtn" onclick="onclicknum('G')" />
+        <input type="button" id="H" value="H" class="smbtn" onclick="onclicknum('H')" />
+        <input type="button" id="J" value="J" class="smbtn" onclick="onclicknum('J')" />
+        <input type="button" id="K" value="K" class="smbtn" onclick="onclicknum('K')" />
+        <input type="button" id="L" value="L" class="smbtn" onclick="onclicknum('L')" />
+        <input type="button" id="bksp" value="Bksp" class="smbtn" onclick="onclickbackspace()" />
+        <br>
+        <input type="button" id="Z" value="Z" class="smbtn" onclick="onclicknum('Z')" />
+        <input type="button" id="X" value="X" class="smbtn" onclick="onclicknum('X')" />
+        <input type="button" id="C" value="C" class="smbtn" onclick="onclicknum('C')" />
+        <input type="button" id="V" value="V" class="smbtn" onclick="onclicknum('V')" />
+        <input type="button" id="B" value="B" class="smbtn" onclick="onclicknum('B')" />
+        <input type="button" id="N" value="N" class="smbtn" onclick="onclicknum('N')" />
+        <input type="button" id="M" value="M" class="smbtn" onclick="onclicknum('M')" />
+        <input type="button" id="clr" value="Reset" class="hhhhh" onclick="onclickclr()" />
+        <input type="button" id="ok" value="OK" class="smbtn" onclick="onclickcheck()" />
+        
+        <!--300行提前庆祝！-->
+    </body>
+</html>
