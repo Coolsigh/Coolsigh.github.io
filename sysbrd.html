@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>生日快乐!</title>
+        <style>
+            input.pd
+                {
+                    height: 100px;
+                    width: 900px;
+                    background-color: #333333;
+                    color: #ffffff;
+                    border: 3px solid #666666;
+                    font-size: 80px;
+                }
+            input.smbtn
+                {
+                    background-color: #333333;
+                    color: #ffffff;
+                    border: 3px solid #666666;
+                    height: 100px;
+                    width: 300px;
+                    font-size: 80px;
+                }
+            input.smbtnh
+                {
+                    background-color: #333333;
+                    color: #ffffff;
+                    border: 3px solid #666666;
+                    height: 100px;
+                    width: 300px;
+                    font-size: 80px;
+                    display: none;
+                }
+            input:hover
+                {
+                    background-color: #666666;
+                    transition-duration: 0.2s;
+                }
+        </style>
+        
+        <script>
+        var lk = 0;
+        var tme = 1800;
+        var gdz = 0;
+   //     var tme = 2;
+        function onclicknum(nums)
+            {
+                str = document.getElementById("pwd");
+                str.value = str.value + nums;
+            }
+        function check()
+            {
+                if (str.value == 743647458245392786926)
+                    {
+                        //alert ("密钥未生效");
+                        alert ("密钥正确.");
+                        opfst();
+                    }
+                else
+                    {
+                        checklock();
+                    }
+            }
+        function checklock()
+            {
+                if (lk != 5)
+                    {
+                        lk++;
+                        alert ("密钥错误, 还有" + (5 - lk) + "次机会. \n您输入的密钥是:" + str.value + ". \n请检查您输入的密钥是否正确.");
+                    }
+                else
+                    {
+                        //alert ("test ok");
+                        //alert ("密钥正确.");
+                        //opfst();
+                    }
+                if (lk == 5)
+                    {
+                        alert ("已锁定  请在30分钟后重试");
+                        document.getElementById("bt").style.display='none';
+                        document.getElementById("lkd").style.display='block';
+                        setTimeout ("rst()",1800000);
+                       // setTimeout ("rst()",2000);
+
+                        /*while (lk == 5)
+                            {
+                                setTimeout ("countdown()",1000);
+                            }*/
+                        countdown();
+                    }
+                else {}
+            }
+        function countdown()
+            {
+                var itv1 = setInterval ("countd()",1000);
+            }
+        function countd()
+            {
+                tme--;
+                if (tme == 0)
+                    {
+                        window.clearInterval(itv1)
+                        tme = 1800;
+                 //       tme = 2;
+                    }
+            }
+        function restctdn()
+            {
+                alert ("已锁定. 请在" + tme + "秒后重试.");
+            }
+        function rst()
+            {
+                alert ("请重试");
+                lk = 0;
+                document.getElementById("bt").style.display='block';
+                document.getElementById("lkd").style.display='none';
+            }
+        function onclickbackspace()
+            {
+                var t = document.getElementById("nummmessage");
+                str.value = str.value.substr(0,str.value.length-1);
+            }
+        function opfst()
+            {
+                document.body.style.backgroundColor='#ffffff';
+                var hone = document.getElementById('thdo');
+                document.getElementById("1").style.display='none';
+                document.getElementById("2").style.display='none';
+                document.getElementById("3").style.display='none';
+                document.getElementById("4").style.display='none';
+                document.getElementById("5").style.display='none';
+                document.getElementById("6").style.display='none';
+                document.getElementById("7").style.display='none';
+                document.getElementById("8").style.display='none';
+                document.getElementById("9").style.display='none';
+                document.getElementById("0").style.display='none';
+                document.getElementById("bksps").style.display='none';
+                document.getElementById("pwd").style.display='none';
+                document.getElementById("bt").style.display='none';
+                document.getElementById("ff").style.display='none';
+                thdo.innerHTML='正在加载元素 请稍候';
+                setTimeout ("nxtstp()",2649)
+ //               var inv2 = setInterval ("gd()",20);
+            }
+        /*function gd()
+            {
+                gdz++;
+                thdo.innerHTML='正在加载元素...(' + gdz + '%)';
+                setTimeout ("stpitv()",2000);
+            }
+        function stpitv()
+            {
+                window.clearInterval(inv2)
+                gdz = 100;
+                thdo.innerHTML='正在加载元素...(' + gdz + '%)';
+                setTimeout ("hd()",1602);
+            }
+*/
+        function nxtstp()
+            {
+                thdo.style.display='none';
+                setTimeout ("fakeflase()",5000);
+            }
+        function fakeflase()
+            {
+                alert ("我说接下来啥都没有你信不信...");
+                document.getElementById("ys").style.display='block';
+                document.getElementById("no").style.display='block';
+            }
+        function ysiblv()
+            {
+                alert ("呜呜呜...你居然相信后面啥都没有...太伤心了");
+                alert ("3");
+                alert ("2");
+                alert ("1");
+                alert ("拜拜!");
+                window.history.go(-1);
+                var die = 0;
+                while (die < 9)
+                    {
+                        die--;
+                    }
+            }
+        function noidtblv()
+            {
+                alert ("哈哈 太好了");
+                document.getElementById("ys").style.display='none';
+                document.getElementById("no").style.display='none';
+                document.body.style.backgroundColor='#ffeeee';
+                thdo.style.display='block';
+                thdo.style.color='#ffaaaa';
+                thdo.innerHTML='今天是你的生日\n那么...';
+                setTimeout ("zf1()",2500);
+            }
+        function zf1()
+            {
+                thdo.innerHTML='祝你生日快乐吖! XD';
+                setTimeout ("jxl()",2500);
+            }
+        function jxl()
+            {
+                thdo.style.color='#ffffff';
+                thdo.innerHTML='接下来...';
+                document.body.style.backgroundColor='#000000';
+                setTimeout ("dg()",3000);
+            }
+        function dg()
+            {
+                document.getElementById("lzsrdg").style.display='block';
+                thdo.innerHTML=' ';
+                setTimeout ("thdo.innerHTML='来许个愿吧'",2000);
+                setTimeout ("xywc()",5000);  //许愿完成
+            }
+        function xywc()
+            {
+                document.getElementById("xycmplt").style.display='block';
+            }
+        function xywct()
+            {
+                thdo.innerHTML='好哒好哒 来 吹灭蜡烛...';
+                document.getElementById("xycmplt").style.display='none';
+                document.getElementById("cmlz").style.display='block';
+            }
+        function blzcm()
+            {
+                thdo.innerHTML='呼...';
+                document.getElementById("lzsrdg").style.display='none';
+                document.getElementById("srdg").style.display='block';
+                document.getElementById("cmlz").style.display='none';
+                setTimeout ("fnl()",1500);
+            }
+        function fnl()
+            {
+                thdo.innerHTML='生日快乐！';
+                setTimeout ("egg()",2000);
+            }
+        function egg()
+            {
+                thdo.innerHTML='你不会以为我不喜欢你吧';
+                setTimeout ("fns()",75);
+            }
+        function fns()
+            {
+                thdo.innerHTML='生日快乐！';
+            }
+        </script>
+    </head>
+    
+    <body>
+        <center>
+        <h1 id="thdo"></h1>
+        <input type="password" id="pwd" class="pd" placeholder="请输入密钥"/>
+        </center><table align="center" id="ff"><tr><center><td>
+        <input type="button" id="1" value="1" class="smbtn" onclick="onclicknum('1')" /></td><td>
+        <input type="button" id="2" value="2" class="smbtn" onclick="onclicknum('2')" /></td><td>
+        <input type="button" id="3" value="3" class="smbtn" onclick="onclicknum('3')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="4" value="4" class="smbtn" onclick="onclicknum('4')" /></td><td>
+        <input type="button" id="5" value="5" class="smbtn" onclick="onclicknum('5')" /></td><td>
+        <input type="button" id="6" value="6" class="smbtn" onclick="onclicknum('6')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="7" value="7" class="smbtn" onclick="onclicknum('7')" /></td><td>
+        <input type="button" id="8" value="8" class="smbtn" onclick="onclicknum('8')" /></td><td>
+        <input type="button" id="9" value="9" class="smbtn" onclick="onclicknum('9')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="0" value="0" class="smbtn" onclick="onclicknum('0')" /></td><td>
+        <input type="button" id="bt" value="确定" onclick="check()" class="smbtn" /><input type="button" id="lkd" value="锁定" onclick="restctdn()" class="smbtnh" /></td><td>
+        <input type="button" id="bksps" value="退格" onclick="onclickbackspace()" class="smbtn" /></td>
+        </center></tr></table>
+        <center><button id="ys" onclick="ysiblv()" style="display: none">我信</button></center><center><button id="no" onclick="noidtblv()" style="display: none">我不信</button></center>
+        <center><img src="https://www.freeimg.cn/i/2023/11/29/656734bd357f8.png" alt="canva-MACsKSLYV18.png" title="canva-MACsKSLYV18.png" id="lzsrdg" style="display: none"/></center>
+        <center><img src="https://www.freeimg.cn/i/2023/11/29/6567352a3d8ab.png" alt="IMG_20231125_095824.png" title="IMG_20231125_095824.png" id="srdg" style="display: none"/></center>
+        <center><input type="button" id="xycmplt" value="完成" onclick="xywct()" class="smbtnh" /></center>
+        <center><input type="button" id="cmlz" value="吹蜡烛" onclick="blzcm()" class="smbtnh" /></center>
+    </body>
+
+</html>
