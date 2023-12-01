@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>屏幕坏点测试器</title>
+        <style></style>
+        <script>
+            //var clr = ;
+            function conf1()
+                {
+                    var c = confirm ("是否打开了全屏模式?\n如果是, 请点击\"确定\".\n如果没有打开全屏模式, 请点击\"取消\".");
+                    if (c == false)
+                        {
+                            alert ("请打开全屏模式.");
+                        }
+                    else
+                        {
+                            conf2();
+                        }
+                }
+            function conf2()
+                {
+                    var o = confirm ("是否使用的是系统浏览器?\n系统浏览器的测试效果更好.\n如果是, 点击\"确定\".如果不是, 点击\"取消\".");
+                    if (o == true)
+                        {
+                            alert ("即将开始测试. 请仔细观察你的屏幕.\n每隔5秒切换一次.");
+                            document.getElementById("confirm").style.visibility='hidden';
+                            setTimeout ("starttest()",1000);
+                        }
+                    else
+                        {
+                            alert ("请使用系统浏览器.");
+                        }
+                }
+            function starttest()
+                {
+                    document.body.style.backgroundColor='#ff0000';
+                    setTimeout ("document.body.style.backgroundColor='#00ff00';",5000);
+                    setTimeout ("document.body.style.backgroundColor='#0000ff';",10000);
+                    setTimeout ("document.body.style.backgroundColor='#000000';",15000);
+                    setTimeout ("document.body.style.backgroundColor='#ffffff';",20000);
+                    setTimeout ("alert ('测试完成.');document.body.style.backgroundColor='#000000';document.getElementById('retest').style.visibility='visible';",25000);
+                    
+                }
+            function retest()
+                {
+                    document.getElementById("retest").style.visibility='hidden';
+                    alert ("即将开始测试.");
+                    document.body.style.backgroundColor='#ff0000';
+                    setTimeout ("document.body.style.backgroundColor='#00ff00';",5000);
+                    setTimeout ("document.body.style.backgroundColor='#0000ff';",10000);
+                    setTimeout ("document.body.style.backgroundColor='#000000';",15000);
+                    setTimeout ("document.body.style.backgroundColor='#ffffff';",20000);
+                    setTimeout ("alert ('测试完成.');document.body.style.backgroundColor='#000000';document.getElementById('retest').style.visibility='visible';",25000);
+                }
+        </script>
+    </head>
+    
+    <body style="background-color: #000000">
+        <center><input type="button" id="confirm" onclick="conf1()" value="开始测试" /><br>
+        <input type="button" id="retest" onclick="retest()" value="重新测试" style="visibility: hidden" /></center>
+    </body>
+
+</html>
