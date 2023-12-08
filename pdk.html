@@ -6,24 +6,18 @@
         <style>
             input.dth
                 {
-                    background-color: #555555;
+                    background-color: #444444;
                     color: #ffffff;
-                    border-top: #ff0000;
-                    border-left: #ff0000;
-                    border-bottom: #ff0000;
-                    border-right: #ff0000;
+                    border: 2px solid #666666;
                     height: 3.0em;
                     width: 1000px;
                     font-size: 2.0em;
                 }
             input.smbtn
                 {
-                    background-color: #555555;
+                    background-color: #444444;
                     color: #ffffff;
-                    border-top: #ff0000;
-                    border-left: #ff0000;
-                    border-bottom: #ff0000;
-                    border-right: #ff0000;
+                    border: 2px solid #666666;
                     height: 2.8em;
                     width: 2.8em;
                     font-size: 2.0em;
@@ -33,17 +27,25 @@
                     color: #333333;
                     text-align: center;
                 }
+            input.hhhhh
+                {
+                    height: 2.8em; 
+                    width: 5.735em; 
+                    font-size: 2.0em; 
+                    background-color: #444444; 
+                    color: #ffffff; 
+                    border: 2px solid #666666
+                }
+            input:hover
+                {
+                    background-color: #666666;
+                    transition-duration: 0.2s;
+                }
         </style>
         <script>
             var str;
             function DeathBox()
                 {
-                    /*alert ("5个字母")
-                    alert ("与 死 有关")
-                    alert ("一个名词")
-                    alert ("还有一个彩蛋密码")
-                    alert ("报应")
-                    alert ("你可以试试输入你的名字的首字母")*/
                     alert ("为防止个人信息泄露, 本站已关闭大部分功能. 仅在节日或特殊日期开放特定功能.");
                 }
             function onclicknum(nums)
@@ -104,7 +106,7 @@
         <input type="button" id="B" value="B" class="smbtn" onclick="onclicknum('B')" />
         <input type="button" id="N" value="N" class="smbtn" onclick="onclicknum('N')" />
         <input type="button" id="M" value="M" class="smbtn" onclick="onclicknum('M')" />
-        <input type="button" id="clr" value="重置" style="height: 2.8em; width: 5.735em; font-size: 2.0em; background-color: #555555; color: #ffffff; border-top: #ff0000; border-left: #ff0000; border-bottom: #ff0000; border-right: #ff0000;" onclick="onclickclr()" />
+        <input type="button" id="clr" value="重置" class="hhhhh" onclick="onclickclr()" />
         <input type="button" id="ok" value="OK" class="smbtn" onclick="onclickcheck()" />
         
         <!--300行提前庆祝！-->
