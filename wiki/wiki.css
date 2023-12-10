@@ -52,3 +52,12 @@
                     border: 3px solid #66f;
                     background-color: #aaf;
                 }
+            a
+                {
+                    text-decoration: none;
+                }
+            a:visited
+                {
+                    text-decoration: none;
+                    color: #777;
+                }
