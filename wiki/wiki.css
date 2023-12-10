@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Clsh Wiki</title>
-        <!-- <link rel="stylesheet" type="text/css" href=""> -->
-        <style>
             body
                 {
                     background-image: url('https://www.freeimg.cn/i/2023/12/09/6574465f0f3d9.jpg');
@@ -59,20 +52,3 @@
                     border: 3px solid #66f;
                     background-color: #aaf;
                 }
-        </style>
-    </head>
-    
-    <body>
-        <h1 style="font-size: 2.6em">Clsh Wiki</h1>
-        <div class="sticky"><p class="mnl">主页(wiki/index/)_Clsh wiki</p>
-        <hr>
-        <ul>
-            <li><a href="https://coolsigh.github.io/wiki/index.html">主页</a></li>
-            <li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus">联系我们</a></li>
-            <li style="float: right"><a href="https://coolsigh.github.io/wiki/about">关于</a></li>
-        </ul></div>
-        <p class="b">温馨提示: 本站属于个人百科, 除站长外其他人无法更改内容. 因此本站严格来说不能算作一个wiki.<br>本站共有1个页面.</p>
-        <div style="padding-bottom: 5000px;">Page is buliding...</div>
-    </body>
-
-</html>
