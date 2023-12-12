@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>clsh 的日记本</title>
-        <link rel="stylesheet" href="https://coolsigh.github.io/wiki/wiki.css">
-        <script>
-                var lk = 0;
+        var lk = 0;
         var str;
         var tme = 1800;
         var gdz = 0;
@@ -94,39 +87,3 @@
                 document.getElementById("bt").style.display='none';
                 document.getElementById("ff").style.display='none';
             }
-        </script>
-    </head>
-    
-    <body>
-        <h1 style="font-size: 2.6em">Clsh Wiki</h1>
-        <div class="sticky"><p class="mnl">clsh 的日记本(wiki/diary/index)_Clsh wiki</p>
-        <hr>
-        <ul>
-            <li><a href="https://coolsigh.github.io/wiki/index.html">主页</a></li>
-            <li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus">联系我们</a></li>
-            <li style="float: right"><a href="https://coolsigh.github.io/wiki/about">关于</a></li>
-        </ul></div>
-        <p class="b">提示: 在'wiki/diary/'目录下均属于clsh的个人内容. 如要查看, 请申请clsh的同意之后再查看. <br>要获得密码, 请联系我们.<br>不欢迎直接查看源码的行为!</p>
-        <center>
-        <h1 id="thdo"></h1>
-        <input type="password" id="pwd" placeholder="请输入密码查看内容"/>
-        </center><table align="center" id="ff"><tr><center><td>
-        <input type="button" id="1" value="1" onclick="onclicknum('1')" /></td><td>
-        <input type="button" id="2" value="2" onclick="onclicknum('2')" /></td><td>
-        <input type="button" id="3" value="3" onclick="onclicknum('3')" /></td>
-        </center></tr><br><tr><center><td>
-        <input type="button" id="4" value="4" onclick="onclicknum('4')" /></td><td>
-        <input type="button" id="5" value="5" onclick="onclicknum('5')" /></td><td>
-        <input type="button" id="6" value="6" onclick="onclicknum('6')" /></td>
-        </center></tr><br><tr><center><td>
-        <input type="button" id="7" value="7" onclick="onclicknum('7')" /></td><td>
-        <input type="button" id="8" value="8" onclick="onclicknum('8')" /></td><td>
-        <input type="button" id="9" value="9" onclick="onclicknum('9')" /></td>
-        </center></tr><br><tr><center><td></td><td>
-        <input type="button" id="0" value="0" onclick="onclicknum('0')" /></td></tr><br><tr><td>
-        <input type="button" id="bt" value="确定" onclick="check()"  /><input type="button" id="lkd" value="锁定" onclick="restctdn()" style="display: none;"/></td><td>
-        <input type="button" id="bksps" value="退格" onclick="onclickbackspace()" /></td>
-        </center></tr></table>
-    </body>
-
-</html>
