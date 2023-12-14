@@ -2,10 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>clsh 的日记本</title>
+        <title>日记_2023.12.14</title>
         <link rel="stylesheet" href="https://coolsigh.github.io/wiki/wiki.css">
         <script>
-                var lk = 0;
+        var lk = 0;
         var str;
         var tme = 1800;
         var gdz = 0;
@@ -16,10 +16,11 @@
             }
         function check()
             {
-                if (str.value == 2481632641281234)
+                if (str.value == 2481632641281234231214)
                     {
                         alert ("密钥正确.");
                         opfst();
+// 记得要添加 密码正确显示内容 函数
                     }
                 else
                     {
@@ -93,19 +94,35 @@
                 document.getElementById("pwd").style.display='none';
                 document.getElementById("bt").style.display='none';
                 document.getElementById("ff").style.display='none';
-                displaylinks();
+                displayct();
             }
-        function displaylinks()
+        function displayct()
             {
-                document.getElementById("1").style.display='block';
-                document.getElementById("pgnb").style.display='block';
+                document.getElementById("titl").style.display='block';
+                document.getElementById("ps1").style.display='block';
+                document.getElementById("b1").style.display='block';
+                document.getElementById("ps2").style.display='block';
+                document.getElementById("hdb").style.display='block';
+            }
+        function hdeg()
+            {
+                var pswrd = prompt ("输入密码查看");
+                if (pswrd == 2464926926)
+                    {
+                        document.getElementById("hodden").style.display='block';
+                    }
+                else
+                    {
+                        alert ("密码错误.");
+                    }
             }
         </script>
     </head>
     
     <body>
         <h1 style="font-size: 2.6em">Clsh Wiki</h1>
-        <div class="sticky"><p class="mnl">clsh 的日记本(wiki/diary/index)_Clsh wiki</p>
+        <!-- 记住更改<p></p>标签内容 -->
+        <div class="sticky"><p class="mnl">日记_2023.12.14(wiki/diary/diary_20231214)</p>
         <hr>
         <ul>
             <li><a href="https://coolsigh.github.io/wiki/index.html">主页</a></li>
@@ -113,9 +130,12 @@
             <li style="float: right"><a href="https://coolsigh.github.io/wiki/about">关于</a></li>
         </ul></div>
         <p class="b">提示: 在'wiki/diary/'目录下均属于clsh的个人内容. 如要查看, 请申请clsh的同意之后再查看. <br>要获得密码, 请联系我们.<br>不欢迎直接查看源码的行为!</p>
-        <br>
-        <h2 id="pgnb" style="display: none;">共有1个页面链接在此分支下.</h2>
-        <a id="1" style="display: none;" href="20231214">日记_2023年12月14日</a>
+        <h2 id="titl" style="display: none;">14.12,2023 周四 小雪</h2>
+        <p id="ps1" style="display: none">呼 上了两天网课了...明天还要上<br>就是有点无语, 每天坐九个半多小时...也不比学校强到哪去*<br><br>今天(j)文贤想要虚拟机玩玩...我直接镜像给他, 顺便给了运行软件 配置文件 还有使用说明.<br>但是! 当上完课的时候他去网盘下载 网盘服务器居然寄了! 啊啊啊</p><br>
+        <p class="b" id="b1" style="display: none;">一边上课一边写码... 别不信, 我直接分屏*</p><br>
+        <p id="ps2" style="display: none;">烦死了...昨天改了一下邮箱地址 差点把我累死 (新邮箱:<a href="mailto:clsh248163@sina.com">clsh248163@sina.com</a>不要问我为什么! 问就是所有用邮箱注册的账号 都要更改邮箱! 教训非常惨痛!<br>原邮箱仍然正常运转.<br>微信邮箱地址还没法解绑了... 然后说至少有一种绑定方式 所以我用QQ绑定 结果我QQ由于2年多没登录 在这里算作了一个新设备 所以微信提示该QQ号暂时无法绑定... 上网上搜了一下 说等几天才行...</p><br>
+        <p id="hodden" style="display: none;">爱你呢 小燕同学 --by clsh</p>
+        <input type="button" id="hdb" style="display: none;" onclick="hdeg()" value="其他" />
         <center>
         <h1 id="thdo"></h1>
         <input type="password" id="pwd" placeholder="请输入密码查看内容"/>
