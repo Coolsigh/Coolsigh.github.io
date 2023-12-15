@@ -1,43 +1,143 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>页面跳转</title>
-    <style>
-      p.tt
-      {
-        text-align: center;
-        font-size: 4em;
-        color: #ffffff;
-      }
-      a.yy
-      {
-        color: #ffffff;
-        font-size: 2.5em;
-      }
-    </style>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <title>clsh 的日记本</title>
+        <link rel="stylesheet" href="https://coolsigh.github.io/wiki/wiki.css">
+        <script>
+                var lk = 0;
+        var str;
+        var tme = 1800;
+        var gdz = 0;
+        function onclicknum(nums)
+            {
+                str = document.getElementById("pwd");
+                str.value = str.value + nums;
+            }
+        function check()
+            {
+                if (str.value == 2679)
+                    {
+                        alert ("密钥正确.");
+                        opfst();
+                    }
+                else
+                    {
+                        checklock();
+                    }
+            }
+        function checklock()
+            {
+                if (lk != 5)
+                    {
+                        lk++;
+                        alert ("密钥错误, 还有" + (5 - lk) + "次机会. \n您输入的密钥是:" + str.value + ". \n请检查您输入的密钥是否正确.");
+                    }
+                else
+                    {
+                    }
+                if (lk == 5)
+                    {
+                        alert ("已锁定  请在30分钟后重试");
+                        document.getElementById("bt").style.display='none';
+                        document.getElementById("lkd").style.display='block';
+                        setTimeout ("rst()",1800000);
+                        countdown();
+                    }
+                else {}
+            }
+        function countdown()
+            {
+                var itv1 = setInterval ("countd()",1000);
+            }
+        function countd()
+            {
+                tme--;
+                if (tme == 0)
+                    {
+                        window.clearInterval(itv1)
+                        tme = 1800;
+                    }
+            }
+        function restctdn()
+            {
+                alert ("已锁定. 请在" + tme + "秒后重试.");
+            }
+        function rst()
+            {
+                alert ("请重试");
+                lk = 0;
+                document.getElementById("bt").style.display='block';
+                document.getElementById("lkd").style.display='none';
+            }
+        function onclickbackspace()
+            {
+                var t = document.getElementById("nummmessage");
+                str.value = str.value.substr(0,str.value.length-1);
+            }
+        function opfst()
+            {
+                document.body.style.backgroundColor='#ffffff';
+                var hone = document.getElementById('thdo');
+                document.getElementById("1").style.display='none';
+                document.getElementById("2").style.display='none';
+                document.getElementById("3").style.display='none';
+                document.getElementById("4").style.display='none';
+                document.getElementById("5").style.display='none';
+                document.getElementById("6").style.display='none';
+                document.getElementById("7").style.display='none';
+                document.getElementById("8").style.display='none';
+                document.getElementById("9").style.display='none';
+                document.getElementById("0").style.display='none';
+                document.getElementById("bksps").style.display='none';
+                document.getElementById("pwd").style.display='none';
+                document.getElementById("bt").style.display='none';
+                document.getElementById("ff").style.display='none';
+                displaylinks();
+            }
+        function displaylinks()
+            {
+                document.getElementById("1").style.display='block';
+                document.getElementById("2").style.display='block';
+                document.getElementById("pgnb").style.display='block';
+            }
+        </script>
+    </head>
+    
+    <body>
+        <h1 style="font-size: 2.6em">Clsh Wiki</h1>
+        <div class="sticky"><p class="mnl">clsh 的日记本(wiki/diary/index)_Clsh wiki</p>
+        <hr>
+        <ul>
+            <li><a href="https://coolsigh.github.io/wiki/index.html">主页</a></li>
+            <li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus">联系我们</a></li>
+            <li style="float: right"><a href="https://coolsigh.github.io/wiki/about">关于</a></li>
+        </ul></div>
+        <p class="b">提示: 在'wiki/diary/'目录下均属于clsh的个人内容. 如要查看, 请申请clsh的同意之后再查看. <br>要获得密码, 请联系我们.<br>不欢迎直接查看源码的行为!</p>
+        <br>
+        <h2 id="pgnb" style="display: none;">共有2个页面链接在此分支下.</h2>
+        <a id="1" style="display: none;" href="https://coolsigh.github.io/wiki/diary/diary_20231214.html">日记_2023年12月14日</a>
+        <a id="2" style="display: none;" href="https://coolsigh.github.io/wiki/diary/diary_20231215.html">日记_2023年12月15日</a>
+        <center>
+        <h1 id="thdo"></h1>
+        <input type="password" id="pwd" placeholder="请输入密码查看内容"/>
+        </center><table align="center" id="ff"><tr><center><td>
+        <input type="button" id="1" value="1" onclick="onclicknum('1')" /></td><td>
+        <input type="button" id="2" value="2" onclick="onclicknum('2')" /></td><td>
+        <input type="button" id="3" value="3" onclick="onclicknum('3')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="4" value="4" onclick="onclicknum('4')" /></td><td>
+        <input type="button" id="5" value="5" onclick="onclicknum('5')" /></td><td>
+        <input type="button" id="6" value="6" onclick="onclicknum('6')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="7" value="7" onclick="onclicknum('7')" /></td><td>
+        <input type="button" id="8" value="8" onclick="onclicknum('8')" /></td><td>
+        <input type="button" id="9" value="9" onclick="onclicknum('9')" /></td>
+        </center></tr><br><tr><center><td></td><td>
+        <input type="button" id="0" value="0" onclick="onclicknum('0')" /></td></tr><br><tr><td>
+        <input type="button" id="bt" value="确定" onclick="check()"  /><input type="button" id="lkd" value="锁定" onclick="restctdn()" style="display: none;"/></td><td>
+        <input type="button" id="bksps" value="退格" onclick="onclickbackspace()" /></td>
+        </center></tr></table>
+    </body>
 
-  <body style="background-color: #000000">
-    <p class="tt">
-        有6个页面链接至此. 点击对应的页面以跳转.
-    </p>
-    
-      
-    <a href="https://coolsigh.github.io/timer.html" class="yy">计时器</a>
-    
-        <br>
-    <a href="https://coolsigh.github.io/pdk.html" class="yy">输入口令（该站为防止个人信息泄露, 已关闭大部分功能. 但是练习练习打字还是可以的, 网站仅在节日或特殊日期开放特定功能）</a>
-        <br>
-      
-        <a href="https://coolsigh.github.io/calc.html" class="yy">计算器</a>
-        <br>
-    <a href="https://coolsigh.github.io/dates.html" class="yy">网站运行日志</a>
-        <br>
-    <a href="https://coolsigh.github.io/pmhdtest.html" class="yy">屏幕坏点测试器</a>
-        <br>
-    <a href="https://coolsigh.github.io/wiki" class="yy">Clsh Wiki (个人百科)</a>
-        <br>
-        <!--在这行上方添加--><!--不要忘记更改页面数-->
-    <a href="https://coolsigh.github.io/index_en_UK.html" class="yy">切换语言: English(UK)</a>
-  </body>
 </html>
