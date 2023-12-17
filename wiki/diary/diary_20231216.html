@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>日记_2023.12.16</title>
+        <link rel="stylesheet" href="https://coolsigh.github.io/wiki/wiki.css">
+        <script>
+        var lk = 0;
+        var str;
+        var tme = 1800;
+        var gdz = 0;
+        function onclicknum(nums)
+            {
+                str = document.getElementById("pwd");
+                str.value = str.value + nums;
+            }
+        function check()
+            {
+                if (str.value == 2312161)
+                    {
+                        alert ("密钥正确.");
+                        opfst();
+// 记得要添加 密码正确显示内容 函数
+                    }
+                else
+                    {
+                        checklock();
+                    }
+            }
+        function checklock()
+            {
+                if (lk != 5)
+                    {
+                        lk++;
+                        alert ("密钥错误, 还有" + (5 - lk) + "次机会. \n您输入的密钥是:" + str.value + ". \n请检查您输入的密钥是否正确.");
+                    }
+                else
+                    {
+                    }
+                if (lk == 5)
+                    {
+                        alert ("已锁定  请在30分钟后重试");
+                        document.getElementById("bt").style.display='none';
+                        document.getElementById("lkd").style.display='block';
+                        setTimeout ("rst()",1800000);
+                        countdown();
+                    }
+                else {}
+            }
+        function countdown()
+            {
+                var itv1 = setInterval ("countd()",1000);
+            }
+        function countd()
+            {
+                tme--;
+                if (tme == 0)
+                    {
+                        window.clearInterval(itv1)
+                        tme = 1800;
+                    }
+            }
+        function restctdn()
+            {
+                alert ("已锁定. 请在" + tme + "秒后重试.");
+            }
+        function rst()
+            {
+                alert ("请重试");
+                lk = 0;
+                document.getElementById("bt").style.display='block';
+                document.getElementById("lkd").style.display='none';
+            }
+        function onclickbackspace()
+            {
+                var t = document.getElementById("nummmessage");
+                str.value = str.value.substr(0,str.value.length-1);
+            }
+        function opfst()
+            {
+                document.body.style.backgroundColor='#ffffff';
+                var hone = document.getElementById('thdo');
+                document.getElementById("1").style.display='none';
+                document.getElementById("2").style.display='none';
+                document.getElementById("3").style.display='none';
+                document.getElementById("4").style.display='none';
+                document.getElementById("5").style.display='none';
+                document.getElementById("6").style.display='none';
+                document.getElementById("7").style.display='none';
+                document.getElementById("8").style.display='none';
+                document.getElementById("9").style.display='none';
+                document.getElementById("0").style.display='none';
+                document.getElementById("bksps").style.display='none';
+                document.getElementById("pwd").style.display='none';
+                document.getElementById("bt").style.display='none';
+                document.getElementById("ff").style.display='none';
+                displayct();
+            }
+        function displayct()
+            {
+                document.getElementById("titl").style.display='block';
+                document.getElementById("p1").style.display='block';
+                document.getElementById("hr1").style.display='block';
+                document.getElementById("p2").style.display='block';
+                document.getElementById("bt1").style.display='block';
+                document.getElementById("p3").style.display='block';
+                document.getElementById("hr2").style.display='block';
+                document.getElementById("p4").style.display='block';
+                document.getElementById("hr3").style.display='block';
+                document.getElementById("hd").style.display='block';
+                document.getElementById("bt3").style.display='block';
+            }
+        function pwct()
+            {
+                var pw = prompt ("输入密码查看隐藏内容");
+                if (pw == 9462264)
+                    {
+                        document.getElementById("hd").innerHTML='我QQ号终于回来了 将近两年多没登录了 没有自动注销 真是让我意外*<br>点击下面按钮查看<strong>机密文本</strong>';
+                        document.getElementById("hdbt1").style.display='block';
+                        document.getElementById("qqacc").style.display='block';
+                    }
+                else
+                    {
+                        alert ("密码错误.");
+                    }
+            }
+        </script>
+    </head>
+    
+    <body style="background-color: #fff;">
+        <h1 style="font-size: 2.6em">Clsh Wiki</h1>
+        <!-- 记住更改<p></p>标签内容 -->
+        <div class="sticky"><p class="mnl">日记_2023.12.16(wiki/diary/diary_20231216)_Clsh Wiki</p>
+        <hr>
+        <ul>
+            <li><a href="https://coolsigh.github.io/wiki/index.html">主页</a></li>
+            <li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus">联系我们</a></li>
+            <li style="float: right"><a href="https://coolsigh.github.io/wiki/about">关于</a></li>
+        </ul></div>
+        <p class="b">提示: 在'wiki/diary/'目录下均属于clsh的个人内容. 如要查看, 请申请clsh的同意之后再查看. <br>要获得密码, 请联系我们.<br>不欢迎直接查看源码的行为!</p>
+        
+        <h2 id="titl" style="display: none;">16.12, 2023  周六  晴</h2>
+        <p id="p1" style="display: none; font-size: 3em; text-align: center;">哇哈哈终于到周末了</p>
+        <hr id="hr1" style="display: none;">
+        <p id="p2" style="display: none;">早晨睡到八点半* 为什么? 见<a href="https://coolsigh.github.io/wiki/diary/diary_20231215.html">日记_20231215</a><br>要是懒得跳转的话, 点击下面的按钮</p>
+        <input type="button" id="bt1" value="显示iframe插入网页" style="display: none;" onclick="document.getElementById('ifr1').style.display='block';document.getElementById('bt1').style.display='none';alert ('已经显示iframe插入网页.');document.getElementById('bt2').style.display='block';" />
+        <input type="button" id="bt2" value="关闭iframe插入网页" style="display: none;" onclick="document.getElementById('ifr1').style.display='none';document.getElementById('bt1').style.display='block';alert ('已经关闭iframe插入网页.');document.getElementById('bt2').style.display='none';" />
+        <iframe id="ifr1" src="https://coolsigh.github.io/wiki/diary/diary_20231215.html" style="display: none; height: 600px; width: 900px;"></iframe><br>
+        <p id="p3" style="display: none;">所以... 知道了我为什么睡到这个时候吧? <del>严重失眠...</del><br><del>但是还要写作业*</del><br>昨天的<a href="https://coolsigh.github.io/wiki/diary/diary_20231215.html">日记_20231215</a>下面的两个图片 由于在freeimg图床不过审<del>审核太严格了...</del>所以我只能用postimg图床上传图片. 但是我没想到... postimg图床上传之后的图片 引用到网站里 居然... <strong>这么模糊!</strong><br>无语了</p><hr id="hr2" style="display: none;">
+        <p id="p4" style="display: none;">把手机办公软件换成了Microsoft 365 for Android 但是 我永远都想不到 老师发的文件(带有图片)在365中打不开(<br>所以 我只能把WPS Office下了回来*<br><br>出去打印卷 路上雪根本没化好* <br><del>恐怕 下周 还要上网课了...</del><br>但是我今天到现在(14:52) 作业一样没写完... 今晚又要<del>疯狂地</del>写作业了*</p><hr id="hr3" style="display: none;">
+        <input type="button" id="bt3" style="display: none;" onclick="pwct()" value="隐藏内容 点击查看" />
+        <p id="hd" style="display: none;"></p>
+        <input type="button" id="hdbt1" style="display: none;" value="机密" onclick="document.getElementById('qqacc').innerHTML='2089196464';document.getElementById('qqacc').style.color='#333';document.getElementById('qqacc').style.backgroundColor='#000';" /><p id="qqacc" style="display: none;"></p>
+        
+        <center>
+        <h1 id="thdo"></h1>
+        <input type="password" id="pwd" placeholder="请输入密码查看内容"/>
+        </center><table align="center" id="ff"><tr><center><td>
+        <input type="button" id="1" value="1" onclick="onclicknum('1')" /></td><td>
+        <input type="button" id="2" value="2" onclick="onclicknum('2')" /></td><td>
+        <input type="button" id="3" value="3" onclick="onclicknum('3')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="4" value="4" onclick="onclicknum('4')" /></td><td>
+        <input type="button" id="5" value="5" onclick="onclicknum('5')" /></td><td>
+        <input type="button" id="6" value="6" onclick="onclicknum('6')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="7" value="7" onclick="onclicknum('7')" /></td><td>
+        <input type="button" id="8" value="8" onclick="onclicknum('8')" /></td><td>
+        <input type="button" id="9" value="9" onclick="onclicknum('9')" /></td>
+        </center></tr><br><tr><center><td></td><td>
+        <input type="button" id="0" value="0" onclick="onclicknum('0')" /></td></tr><br><tr><td>
+        <input type="button" id="bt" value="确定" onclick="check()"  /><input type="button" id="lkd" value="锁定" onclick="restctdn()" style="display: none;"/></td><td>
+        <input type="button" id="bksps" value="退格" onclick="onclickbackspace()" /></td>
+        </center></tr></table>
+    </body>
+
+</html>
