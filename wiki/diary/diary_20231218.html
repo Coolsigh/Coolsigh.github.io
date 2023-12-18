@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>日记_2023.12.17</title>
+        <link rel="stylesheet" href="https://coolsigh.github.io/wiki/wiki.css">
+        <script>
+        var lk = 0;
+        var str;
+        var tme = 1800;
+        var gdz = 0;
+        function onclicknum(nums)
+            {
+                str = document.getElementById("pwd");
+                str.value = str.value + nums;
+            }
+        function check()
+            {
+                if (str.value == 775599)
+                    {
+                        alert ("密钥正确.");
+                        opfst();
+// 记得要添加 密码正确显示内容 函数
+                    }
+                else if (str.value == 787276)
+                    {
+                        alert ("sy生日特供密码触发");
+                        sybrd();
+                    }
+                else
+                    {
+                        if (str.value == 459273)
+                            {
+                                alert ("gjw生日特供(Timed out)密码触发");
+                                gjwbrd();
+                            }
+                        else
+                            {
+                                checklock();
+                            }
+                    }
+            }
+        function checklock()
+            {
+                if (lk != 5)
+                    {
+                        lk++;
+                        alert ("密钥错误, 还有" + (5 - lk) + "次机会. \n您输入的密钥是:" + str.value + ". \n请检查您输入的密钥是否正确.");
+                    }
+                else
+                    {
+                    }
+                if (lk == 5)
+                    {
+                        alert ("已锁定  请在30分钟后重试");
+                        document.getElementById("bt").style.display='none';
+                        document.getElementById("lkd").style.display='block';
+                        setTimeout ("rst()",1800000);
+                        countdown();
+                    }
+                else {}
+            }
+        function countdown()
+            {
+                var itv1 = setInterval ("countd()",1000);
+            }
+        function countd()
+            {
+                tme--;
+                if (tme == 0)
+                    {
+                        window.clearInterval(itv1)
+                        tme = 1800;
+                    }
+            }
+        function restctdn()
+            {
+                alert ("已锁定. 请在" + tme + "秒后重试.");
+            }
+        function rst()
+            {
+                alert ("请重试");
+                lk = 0;
+                document.getElementById("bt").style.display='block';
+                document.getElementById("lkd").style.display='none';
+            }
+        function onclickbackspace()
+            {
+                var t = document.getElementById("nummmessage");
+                str.value = str.value.substr(0,str.value.length-1);
+            }
+        function opfst()
+            {
+                document.body.style.backgroundColor='#ffffff';
+                var hone = document.getElementById('thdo');
+                document.getElementById("1").style.display='none';
+                document.getElementById("2").style.display='none';
+                document.getElementById("3").style.display='none';
+                document.getElementById("4").style.display='none';
+                document.getElementById("5").style.display='none';
+                document.getElementById("6").style.display='none';
+                document.getElementById("7").style.display='none';
+                document.getElementById("8").style.display='none';
+                document.getElementById("9").style.display='none';
+                document.getElementById("0").style.display='none';
+                document.getElementById("bksps").style.display='none';
+                document.getElementById("pwd").style.display='none';
+                document.getElementById("bt").style.display='none';
+                document.getElementById("ff").style.display='none';
+                displayct();
+            }
+        
+        function sybrd()
+            {
+                document.getElementById("1").style.display='none';
+                document.getElementById("2").style.display='none';
+                document.getElementById("3").style.display='none';
+                document.getElementById("4").style.display='none';
+                document.getElementById("5").style.display='none';
+                document.getElementById("6").style.display='none';
+                document.getElementById("7").style.display='none';
+                document.getElementById("8").style.display='none';
+                document.getElementById("9").style.display='none';
+                document.getElementById("0").style.display='none';
+                document.getElementById("bksps").style.display='none';
+                document.getElementById("pwd").style.display='none';
+                document.getElementById("bt").style.display='none';
+                document.getElementById("ff").style.display='none';
+                alert ("由于在日记本里没法「大展拳脚」所以我只能做的比较简单...你不会介意吧宝宝?");
+                //var tetx = document.getElementById("titl").style.display='block';
+               // tetx.style.textAlign='center';
+                alert ('生日快乐呐宝宝 爱你😘');
+                alert ("真的只能做这么简单了宝宝...");
+                alert ("最后祝你\nttkx");
+            }
+        function gjwbrd()
+            {
+                alert ("对不起对不起! 时间真的太匆忙了, 以至于我拖到现在才给你, 还做的一点都不精致...\n\n(迟来的)生日快乐!");
+            }
+            
+            
+        function displayct()
+            {
+                document.getElementById("titl").style.display='block';
+                document.getElementById("p1").style.display='block';
+                document.getElementById("img1").style.display='block';
+                document.getElementById("hr1").style.display='block'
+                document.getElementById("p2").style.display='block';
+                document.getElementById("b1").style.display='block';
+                document.getElementById("p3").style.display='block';
+                document.getElementById("b2").style.display='block';
+                document.getElementById("bt1").style.display='block';
+                document.getElementById("p4").style.display='block';
+            }
+        </script>
+    </head>
+    
+    <body style="background-color: #fff;">
+        <h1 style="font-size: 2.6em">Clsh Wiki</h1>
+        <!-- 记住更改<p></p>标签内容 -->
+        <div class="sticky"><p class="mnl">日记_2023.12.17(wiki/diary/diary_20231217)_Clsh Wiki</p>
+        <hr>
+        <ul>
+            <li><a href="https://coolsigh.github.io/wiki/index.html">主页</a></li>
+            <li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus">联系我们</a></li>
+            <li style="float: right"><a href="https://coolsigh.github.io/wiki/about">关于</a></li>
+        </ul></div>
+        <p class="b">提示: 在'wiki/diary/'目录下均属于clsh的个人内容. 如要查看, 请申请clsh的同意之后再查看. <br>要获得密码, 请联系我们.<br>不欢迎直接查看源码的行为!</p>
+        <h2 id="titl" style="display: none;">17.12 ,2023 周一 晴</h2>
+        <p id="p1" style="display: none;">哈哈哈*太开心啦*</p>
+        <img id="img1" style="display: none; height: 265px; width: 360px;" src="https://www.freeimg.cn/i/2023/12/18/658010f07585e.jpg" alt="Screenshot_20231218_172829.jpg" title="Screenshot_20231218_172829.jpg" />
+        <hr id="hr1" style="display: none;">
+        <p id="p2" style="display: none;">哈哈哈太开心啦 <strong>明天还上网课!!!</strong> 我真是太<strong>**</strong>开心啦!!!</p>
+        <p id="b1" class="b" style="display: none; text-align: center;">---------------分割线---------------</p>
+        <p id="p3" style="display: none;">明天我就要回家了 爸妈厂里放假 本来明天中午他们就能回去的... 但是由于上<strong>网课</strong><del>我真谢谢你。。。</del>, 我妈不得不在这陪我...<br><br>好无语</p>
+        <p class="b" id="b2" style="display: none;">对不起对不起gjw!! 我时间真的不够了啦! 要不然我会做的精致一点的...</p>
+        <input type="button" id="bt1" style="display: none;" value="隐藏内容 点击查看" onclick="var cfm = prompt ('输入密码查看内容');if (cfm == 2464){document.getElementById('bhdn').style.display='block';document.getElementById('bhdns').style.display='block';}else{alert ('密码错误.');}" />
+        <p class="b" id="bhdn" style="display: none;">对不起宝宝...! 你的我本来想引用一个现成的iframe网页在这里 但是 我根本找不到现成的...<br>对不起宝宝! 你...不会生气吧?<br>要是生气了的话... *抱抱* 爱你😘</p>
+        <p class="b" id="bhdns" style="display: none;">对了宝宝 由于我要从厂里回家了 所以... 以后我不能再经常和你在微信或者聊天室里聊天了... 唉<br>但是我会尽量找时间和你聊天的宝宝 不要「暗自感伤」(?<br>等过完年之后再回厂里 咱俩就又可以常聊天啦 别急哦! :P<br>爱你宝宝😘<br>这是我只对你开放的<a href="javascript:var ifc = confirm ('您点击了一个不属于Clsh Wiki下的分页面的页面.\n我们不保证其安全性.\n你确定要跳转吗？\n如果造成任何损失, 我们恕不承担因此引起的任何责任.');if (ifc == true){window.location.href='https://note.ms/clshpri'}else{}">留言板</a>, 要是有什么想说的就来这里写下来吧! 我会不定期的查看 同时我也可以在这里给你回复哒! 爱你</p>
+        <p id="p4" style="display: none;">对了这是我的<a href="javascript:var ifc = confirm ('您点击了一个不属于Clsh Wiki下的分页面的页面.\n我们不保证其安全性.\n你确定要跳转吗？\n如果造成任何损失, 我们恕不承担因此引起的任何责任.');if (ifc == true){window.location.href='https://note.ms/clshspblc'}else{}">公共留言板</a>有什么想对我说的 在这里留言就好啦! 我会不定期查看并给出回复</p>
+        
+        <center>
+        <h1 id="thdo"></h1>
+        <input type="password" id="pwd" placeholder="请输入密码查看内容"/>
+        </center><table align="center" id="ff"><tr><center><td>
+        <input type="button" id="1" value="1" onclick="onclicknum('1')" /></td><td>
+        <input type="button" id="2" value="2" onclick="onclicknum('2')" /></td><td>
+        <input type="button" id="3" value="3" onclick="onclicknum('3')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="4" value="4" onclick="onclicknum('4')" /></td><td>
+        <input type="button" id="5" value="5" onclick="onclicknum('5')" /></td><td>
+        <input type="button" id="6" value="6" onclick="onclicknum('6')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="7" value="7" onclick="onclicknum('7')" /></td><td>
+        <input type="button" id="8" value="8" onclick="onclicknum('8')" /></td><td>
+        <input type="button" id="9" value="9" onclick="onclicknum('9')" /></td>
+        </center></tr><br><tr><center><td></td><td>
+        <input type="button" id="0" value="0" onclick="onclicknum('0')" /></td></tr><br><tr><td>
+        <input type="button" id="bt" value="确定" onclick="check()"  /><input type="button" id="lkd" value="锁定" onclick="restctdn()" style="display: none;"/></td><td>
+        <input type="button" id="bksps" value="退格" onclick="onclickbackspace()" /></td>
+        </center></tr></table>
+    </body>
+
+</html>
