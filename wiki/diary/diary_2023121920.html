@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>日记_2023.12.19-20</title>
+        <link rel="stylesheet" href="https://coolsigh.github.io/wiki/wiki.css">
+        <style>
+            div.imgs
+                {
+                    background-color: #dedede;
+                    border: 2px solid #939393;
+                }
+        </style>
+        <script>
+        var lk = 0;
+        var str;
+        var tme = 1800;
+        var gdz = 0;
+        function onclicknum(nums)
+            {
+                str = document.getElementById("pwd");
+                str.value = str.value + nums;
+            }
+        function check()
+            {
+                if (str.value == 202312190)
+                    {
+                        alert ("密钥正确.");
+                        opfst();
+// 记得要添加 密码正确显示内容 函数
+                    }
+                else
+                    {
+                        checklock();
+                    }
+            }
+        function checklock()
+            {
+                if (lk != 5)
+                    {
+                        lk++;
+                        alert ("密钥错误, 还有" + (5 - lk) + "次机会. \n您输入的密钥是:" + str.value + ". \n请检查您输入的密钥是否正确.");
+                    }
+                else
+                    {
+                    }
+                if (lk == 5)
+                    {
+                        alert ("已锁定  请在30分钟后重试");
+                        document.getElementById("bt").style.display='none';
+                        document.getElementById("lkd").style.display='block';
+                        setTimeout ("rst()",1800000);
+                        countdown();
+                    }
+                else {}
+            }
+        function countdown()
+            {
+                var itv1 = setInterval ("countd()",1000);
+            }
+        function countd()
+            {
+                tme--;
+                if (tme == 0)
+                    {
+                        window.clearInterval(itv1)
+                        tme = 1800;
+                    }
+            }
+        function restctdn()
+            {
+                alert ("已锁定. 请在" + tme + "秒后重试.");
+            }
+        function rst()
+            {
+                alert ("请重试");
+                lk = 0;
+                document.getElementById("bt").style.display='block';
+                document.getElementById("lkd").style.display='none';
+            }
+        function onclickbackspace()
+            {
+                var t = document.getElementById("nummmessage");
+                str.value = str.value.substr(0,str.value.length-1);
+            }
+        function opfst()
+            {
+                document.body.style.backgroundColor='#ffffff';
+                var hone = document.getElementById('thdo');
+                document.getElementById("1").style.display='none';
+                document.getElementById("2").style.display='none';
+                document.getElementById("3").style.display='none';
+                document.getElementById("4").style.display='none';
+                document.getElementById("5").style.display='none';
+                document.getElementById("6").style.display='none';
+                document.getElementById("7").style.display='none';
+                document.getElementById("8").style.display='none';
+                document.getElementById("9").style.display='none';
+                document.getElementById("0").style.display='none';
+                document.getElementById("bksps").style.display='none';
+                document.getElementById("pwd").style.display='none';
+                document.getElementById("bt").style.display='none';
+                document.getElementById("ff").style.display='none';
+                displayct();
+            }
+        function displayct()
+            {
+                document.getElementById("titl").style.display='block';
+                document.getElementById("p1").style.display='block';
+                document.getElementById("dvimg1").style.display='block';
+                document.getElementById("dvimg2").style.display='block';
+                document.getElementById("img1").style.display='block';
+                document.getElementById("img2").style.display='block';
+                document.getElementById("imgin1").style.display='block';
+                document.getElementById("imgin2").style.display='block';
+                document.getElementById("hrin1").style.display='block';
+                document.getElementById("hrin2").style.display='block';
+                document.getElementById("br1").style.display='block';
+                document.getElementById("hr1").style.display='block';
+                document.getElementById("b1").style.display='block';
+                document.getElementById("img3").style.display='block';
+                document.getElementById("bt1").style.display='block';
+                document.getElementById("hr2").style.display='block';
+                document.getElementById("p3").style.display='block';
+                document.getElementById("dg").style.display='block';
+                document.getElementById("hr2").style.display='block';
+                document.getElementById("titl2").style.display='block';
+                document.getElementById("p4").style.display='block';
+                document.getElementById("bt2").style.display='block';
+                document.getElementById("p5").style.display='block';
+                document.getElementById("img4").style.display='block';
+                document.getElementById("p6").style.display='block';
+                document.getElementById("img5").style.display='block';
+            }
+        function attention()
+            {
+                var cfim = confirm ("警告! 即将显示被折叠的内容. 该内容因为包含负面信息而被折叠.\n\n如果你查看该负面内容, 则你的心情可能会受到影响.\n\nclsh不希望因此坏掉任何一个人的心情(特别是L).\n\n你确定要查看吗?");
+                if (cfim == true)
+                    {
+                        var lstc = confirm ("这是最后一次警告!!!\n\n你真的确定要查看吗?");
+                        if (lstc == true)
+                            {
+                                document.getElementById("wp1").style.display='block';
+                            }
+                        else
+                            {
+                                alert ("...我很庆幸你没这么做.");
+                            }
+                    }
+                else
+                    {
+                        alert ("...我很庆幸你没这么做.");
+                    }
+            }
+        </script>
+    </head>
+    
+    <body style="background-color: #fff;">
+        <h1 style="font-size: 2.6em">Clsh Wiki</h1>
+        <!-- 记住更改<p></p>标签内容 -->
+        <div class="sticky"><p class="mnl">日记_2023年12月19日至2023年12月20日(wiki/diary/diary_2023121920)_Clsh Wiki</p>
+        <hr>
+        <ul>
+            <li><a href="https://coolsigh.github.io/wiki/index.html">主页</a></li>
+            <li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus">联系我们</a></li>
+            <li style="float: right"><a href="https://coolsigh.github.io/wiki/about">关于</a></li>
+        </ul></div>
+        <p class="b">提示: 在'wiki/diary/'目录下均属于clsh的个人内容. 如要查看, 请申请clsh的同意之后再查看. <br>要获得密码, 请联系我们.<br>不欢迎直接查看源码的行为!</p>
+        
+        <h2 id="titl" style="display: none;">19.12, 2023 周二 小到中雪</h2>
+        <p id="p1" style="display: none;">是的 又下雪了 <del>说明又要上好几天网课.</del><br>下图集是<del>微观的雪</del>和<del>宏观的雪</del></p>
+        <div class="imgs" id="dvimg1" style="width: 660px; display: none;"><img id="img1" src="https://picdm.sunbangyan.cn/2023/12/19/565c23ce208129f08dd684a8b8ed0d23.jpeg" alt="IMG_20231219_121633" style="width: 650px; height: 488px; display: none;"/><br><hr id="hrin1" style="display: none;"><p id="imgin1" style="display: none;"><del>微观的</del>雪</p></div><br id="br1" style="display: none;">
+        <div class="imgs" id="dvimg2" style="width: 660px; display: none;"><img id="img2" src="https://picdl.sunbangyan.cn/2023/12/19/cf4d75ddbc55b0b04a6d2c62e77959d8.jpeg" alt="IMG_20231219_120934" style="width: 650px; height: 488px; display: none;"/><br><hr id="hrin2" style="display: none;"><p id="imgin2" style="display: none;"><del>宏观的</del>雪</p></div>
+        <p id="p2" style="display: none;">今天回家啦 在雪中回家*<br><del>为什么有一种悲伤的感觉...</del></p>
+        <hr id="hr1" style="display: none;">
+        <p class="b" id="b1" style="display: none;">唉被加了一个剪纸的作业*<br>为什么? 为了应付劳动考试啊啊啊啊</p>
+        <img id="img3" src="https://picdm.sunbangyan.cn/2023/12/19/2cd2f38820e5de61bbe7c77b52195938.jpeg" alt="Screenshot_20231219_174424_edit_12394649725375" style="height: 860px; width: 360px; display: none;"/>
+        <input type="button" id="bt1" style="display: none;" onclick="var pm = prompt ('输入密码查看');if (pm == 2464926){alert ('呜呜呜不能和你经常聊天了宝宝');alert ('但是...');alert ('爱你');}else{alert ('密码错误.');}" value="隐藏" />
+        <hr id="hr2" style="display: none;">
+        <p id="p3" style="display: none;">老师居然让我一个剪纸<del><strong><i>废物</i></strong></del>剪纸, 呜呜呜...</p>
+        <input type="button" id="dg" style="display: none;" value="点击这里显示被折叠内容" onclick="attention()" />
+        <p id="wp1" style="display: none; border: 5px solid #f00; background-color: #f66">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊<br>md<del>指Markdown</del>真的不想活了<br>为什么? 啊!?<br>真的没意思</p>
+        <hr id="hr2" style="display: none;">
+        <h2 id="titl2" style="display: none;">20.12, 2023 周三 晴</h2>
+        <p id="p4" style="display: none;">昨天晚上睡的很晚... 早上 第一二节物理课 *好困2.0*<br>第三四节课 英语 *啊啊啊啊不困了2.0*<br>[插曲]英语课最后一节 手机没电了 差点关机...<br><br><del>昨天手机没电 插上充电器 结果插排开关没开 然后手机弹窗提示即将关机... 然后我刚好是在第27秒的时候才抬头看到提示 然后慌忙按下开关 *晚了一步*</del><br><br>中午回厂里拿东西 由于车上不去坡 *雪没化* 所以就沿着海边走 经过我半年前经常走的地方 半年没来过一次 变化好大 感觉有点不认识了, 就像我曾经从来没有来过一样 有一种令人悲伤的陌生感 唉 仅仅初三才半年 我已经失去了这么多 那么多从前的记忆 恍若昨日 可惜 从前 再也回不去了</p><br>
+        <input type="button" id="bt2" style="display: none;" value="隐藏 输入密码查看" onclick="var prm = prompt ('输入密码查看');if (prm == 2464926){document.getElementById('hdb1').style.display='block';}else{alert ('密码错误.');}" />
+        <p class="b" id="hdb1" style="display: none;">宝宝... 初三就剩下半年了 我们能在现实中能互相见面和说话的机会和时间也越来越少了 中考之后你我必然会分开 你说 未来 我们还能找到对方吗...?<br><br>不论你怎么想, 但是<strong>我认为一定会的</strong>.<br><br>clsh loves sy and will love her <strong>FOREVER</strong>.</p>
+        <p id="p5" style="display: none;">随便拍了一张</p>
+        <img id="img4" style="width: 781px; height: 650px; display: none;" src="https://picdl.sunbangyan.cn/2023/12/20/6ed7da01cfb2fe44186630eeef28f24d.jpeg" alt="IMG_20231220_161203" />
+        <p id="p6" style="display: none;">哇哇哇!! 今天真是难得啊!! 居然少这么长时间!  哈哈～(￣▽￣～)~  开心٩(๑^o^๑)۶<br>看!</p><br>
+        <img id="img5" style="width: 360px; height: 250px; display: none;" src="https://www.freeimg.cn/i/2023/12/20/6582ab5164459.jpg" alt="Screenshot_20231220_165152.jpg" title="Screenshot_20231220_165152.jpg" />
+        
+        <center>
+        <h1 id="thdo"></h1>
+        <input type="password" id="pwd" placeholder="请输入密码查看内容"/>
+        </center><table align="center" id="ff"><tr><center><td>
+        <input type="button" id="1" value="1" onclick="onclicknum('1')" /></td><td>
+        <input type="button" id="2" value="2" onclick="onclicknum('2')" /></td><td>
+        <input type="button" id="3" value="3" onclick="onclicknum('3')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="4" value="4" onclick="onclicknum('4')" /></td><td>
+        <input type="button" id="5" value="5" onclick="onclicknum('5')" /></td><td>
+        <input type="button" id="6" value="6" onclick="onclicknum('6')" /></td>
+        </center></tr><br><tr><center><td>
+        <input type="button" id="7" value="7" onclick="onclicknum('7')" /></td><td>
+        <input type="button" id="8" value="8" onclick="onclicknum('8')" /></td><td>
+        <input type="button" id="9" value="9" onclick="onclicknum('9')" /></td>
+        </center></tr><br><tr><center><td></td><td>
+        <input type="button" id="0" value="0" onclick="onclicknum('0')" /></td></tr><br><tr><td>
+        <input type="button" id="bt" value="确定" onclick="check()"  /><input type="button" id="lkd" value="锁定" onclick="restctdn()" style="display: none;"/></td><td>
+        <input type="button" id="bksps" value="退格" onclick="onclickbackspace()" /></td>
+        </center></tr></table>
+    </body>
+
+</html>
