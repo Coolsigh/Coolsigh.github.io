@@ -19,7 +19,7 @@
                     float: left;
                     position: sticky;
                 }
-            li a.title
+            li a
                 {
                     display: block;
                     padding: 14px 16px;
