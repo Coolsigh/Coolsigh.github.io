@@ -1,0 +1,69 @@
+            body
+                {
+                    background-image: url('https://www.freeimg.cn/i/2023/12/09/6574465f0f3d9.jpg');
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: cover;
+                }
+            ul
+                {
+                    list-style-type: none;
+                    overflow: hidden;
+                    padding: 0;
+                    margin: 0;
+                    background-color: #888;
+                    position: sticky;
+                }
+            li.title
+                {
+                    float: left;
+                    position: sticky;
+                }
+            li a.title
+                {
+                    display: block;
+                    padding: 14px 16px;
+                    text-align: center;
+                    color: #fff;
+                    text-decoration: none;
+                    position: sticky;
+                }
+            li a:hover
+                {
+                    background-color: #99bbff;
+                    transition-duration: 0.08s;
+                }
+            div.stickytitle
+                {
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 0;
+                    padding: 5px;
+                    border: 2px solid #555;
+                    background-color: #aaa;
+                }
+            div.sticky
+                {
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 2
+                }
+            p.mnl
+                {
+                    color: #222;
+                    font-size: 1em;
+                }
+            p.b
+                {
+                    border: 3px solid #66f;
+                    background-color: #aaf;
+                }
+            a
+                {
+                    text-decoration: none;
+                }
+            a:visited
+                {
+                    text-decoration: none;
+                    /*color: #7ff;*/
+                }
