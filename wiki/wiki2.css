@@ -67,3 +67,8 @@
                     text-decoration: none;
                     /*color: #7ff;*/
                 }
+            div.imgs
+                {
+                    background-color: #dedede;
+                    border: 2px solid #939393;
+                }
